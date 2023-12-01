@@ -1,14 +1,17 @@
 module.exports = {
-  title: '喜鹊ui',
+  title: '喜鹊DesignUI',
   base:'/xiquess-design/',
-  description: 'Just playing around',
+  description: '基于vue2的组件库，专门提供一些常见组件库中没有的特殊组件',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
     //导航
     nav: [
       { text: '首页', link: '/' },
-      { text: '指南', link: '/componentDocs/'},
-      {text:'更新日志',link:'/update/index'},
-      { text: 'NPM', link: 'https://www.npmjs.com/package/xiquess-element-ui' },
+      { text: '指南', link: '/componentDocs/' },
+      { text:'更新日志',link:'/update/index' },
+      { text: '喜鹊声声官网', link: 'https://www.xiquess.com' },
     ],
     sidebar: {
       '/componentDocs/': [

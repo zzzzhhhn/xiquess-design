@@ -38,7 +38,8 @@
     "vue-template-compiler": "^2.7.15",
     "vuepress": "^1.9.10",
     "webpack": "^4",
-    "webpack-cli": "^4"
+    "webpack-cli": "^4",
+    "webpack-dev-server": "^4.15.1"
   },
   "eslintConfig": {
     "root": true,
@@ -77,5 +78,8 @@
   "files": [
     "dist",
     "components"
-  ]
+  ],
+  "resolutions": {
+    "webpack-hot-middleware": "2.25.0"
+  }
 }
