@@ -1,6 +1,6 @@
 module.exports = {
   title: '喜鹊ui',
-  base:'/xq-ui/',
+  base:'/xiquess-design/',
   description: 'Just playing around',
   themeConfig: {
     //导航
@@ -8,7 +8,6 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '指南', link: '/componentDocs/'},
       {text:'更新日志',link:'/update/index'},
-      { text: 'GitHub', link: 'https://github.com/LSFCXZ/linview' },
       { text: 'NPM', link: 'https://www.npmjs.com/package/xiquess-element-ui' },
     ],
     sidebar: {
@@ -22,8 +21,8 @@ module.exports = {
           path:'/componentDocs/start'
         },
         {
-          title: '卡片',
-          path:'/componentDocs/card'
+          title: 'Demo',
+          path:'/componentDocs/demo'
         }
       ]
     }

@@ -8,7 +8,10 @@
     "build": "yarn build:js && yarn build:css",
     "build:js": "webpack --config ./build/webpack.component.js",
     "build:css": "gulp sass --gulpfile build/gulpfile.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "depoly": "bash ./build/deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -31,10 +34,11 @@
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
-    "vue-loader": "^15",
+    "vue-loader": "^15.1.0",
     "vue-template-compiler": "^2.7.15",
     "vuepress": "^1.9.10",
-    "webpack-cli": "^5.1.4"
+    "webpack": "^4",
+    "webpack-cli": "^4"
   },
   "eslintConfig": {
     "root": true,
