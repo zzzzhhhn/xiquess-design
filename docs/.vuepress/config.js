@@ -24,8 +24,8 @@ module.exports = {
           path:'/componentDocs/start'
         },
         {
-          title: 'Demo',
-          path:'/componentDocs/demo'
+          title: 'VideoPlayer',
+          path:'/componentDocs/videoPlayer'
         }
       ]
     }

@@ -2,7 +2,7 @@
 home: true
 heroImage:
 heroText: xiquess-design
-tagline: 简洁、美观、开源的UI框架
+tagline: 简洁、美观、开源的UI框架,由智邦·喜鹊前端团队开发并维护
 actionText: 快速上手 →
 actionLink: /componentDocs/start
 features:

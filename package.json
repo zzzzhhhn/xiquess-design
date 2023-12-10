@@ -1,7 +1,7 @@
 {
   "name": "xiquess-design",
   "version": "0.1.1",
-  "description": "基于VUE2的组件库",
+  "description": "基于VUE2的组件库,由智邦·喜鹊前端团队开发并维护",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",

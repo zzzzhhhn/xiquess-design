@@ -1,0 +1,78 @@
+.xq-video-player {
+  border: 1px solid #ccc;
+  .toolbar {
+    color: #fff;
+    padding: 30px 16px 0 0;
+    background: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.9) 100%);
+    .tip-item {
+      bottom: 14px;
+
+      .point {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .row1 {
+      padding-left: 8px;
+      .btn-circle {
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        transition: all 0.3s;
+        overflow: hidden;
+        &:hover {
+          background: #333;
+        }
+        &.btn-volume {
+          justify-content: flex-end;
+          padding-right: 10px;
+          .volume-line {
+            width: 60px;
+            margin-right: 18px;
+            display: none;
+          }
+          &:hover {
+            width: 120px;
+            .volume-line {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .multipleList:hover {
+        .multipleBox {
+          display: block;
+        }
+      }
+      .multipleBox {
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.89);
+        width: 100px;
+        height: 246px;
+        border-radius: 10px;
+        bottom: 70px;
+        color: #333;
+        .multiple {
+          list-style: none;
+          text-align: center;
+          li {
+            padding: 5px;
+            box-sizing: border-box;
+          }
+          li:hover {
+            background: rgba(255, 255, 255, 0.89);
+          }
+        }
+      }
+    }
+    .row2 {
+      padding-left: 16px;
+    }
+  }
+}
