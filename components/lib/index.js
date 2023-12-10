@@ -1,5 +1,20 @@
-import Demo from "./demo";
-const components = [Demo];
+import Vue from "vue";
+import { Tooltip, Slider } from "element-ui";
+import VideoPlayer from "./VideoPlayer";
+
+const _components = [Tooltip, Slider];
+
+const Element = {
+  install(Vue) {
+    _components.forEach((component) => {
+      console.log(component.name, component);
+      Vue.component(component.name, component);
+    });
+  },
+};
+Vue.use(Element);
+
+const components = [VideoPlayer];
 components.forEach((item) => {
   if (!item.install) {
     item.install = function (Vue) {
@@ -16,9 +31,9 @@ const install = function (Vue) {
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
-const xqui = {
+const xiquessDesign = {
   install,
-  Demo,
+  VideoPlayer,
 };
-window.xqui = xqui;
-export default xqui;
+window.xiquessDesign = xiquessDesign;
+export default xiquessDesign;

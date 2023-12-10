@@ -1,8 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
-import Demo from "../components/lib/demo/index.js";
-console.log("Demo", Demo);
-Vue.use(Demo);
+import VideoPlayer from "../components/lib/VideoPlayer/index.js";
+import "../components/css/index.scss";
+Vue.use(VideoPlayer);
 Vue.config.productionTip = false;
 
 new Vue({

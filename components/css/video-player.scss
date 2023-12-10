@@ -1,13 +1,13 @@
 .xq-video-player {
   border: 1px solid #ccc;
-  .toolbar {
+  .xq-toolbar {
     color: #fff;
     padding: 30px 16px 0 0;
     background: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.9) 100%);
-    .tip-item {
+    .xq-tip-item {
       bottom: 14px;
 
-      .point {
+      .xq-point {
         width: 10px;
         height: 10px;
         background: #fff;
@@ -16,9 +16,9 @@
       }
     }
 
-    .row1 {
+    .xq-row1 {
       padding-left: 8px;
-      .btn-circle {
+      .xq-btn-circle {
         color: #fff;
         width: 30px;
         height: 30px;
@@ -28,40 +28,41 @@
         &:hover {
           background: #333;
         }
-        &.btn-volume {
+        &.xq-btn-volume {
           justify-content: flex-end;
           padding-right: 10px;
-          .volume-line {
+          .xq-volume-line {
             width: 60px;
             margin-right: 18px;
             display: none;
           }
           &:hover {
             width: 120px;
-            .volume-line {
+            .xq-volume-line {
               display: inline-block;
             }
           }
         }
       }
-      .multipleList:hover {
-        .multipleBox {
+      .xq-multipleList:hover {
+        .xq-multipleBox {
           display: block;
         }
       }
-      .multipleBox {
+      .xq-multipleBox {
         display: none;
         position: absolute;
         background: rgba(255, 255, 255, 0.89);
-        width: 100px;
-        height: 246px;
         border-radius: 10px;
+        width: 60px;
         bottom: 70px;
         color: #333;
-        .multiple {
+        .xq-multiple {
           list-style: none;
           text-align: center;
+          padding-left: 0;
           li {
+            width: 100%;
             padding: 5px;
             box-sizing: border-box;
           }
@@ -71,7 +72,7 @@
         }
       }
     }
-    .row2 {
+    .xq-row2 {
       padding-left: 16px;
     }
   }

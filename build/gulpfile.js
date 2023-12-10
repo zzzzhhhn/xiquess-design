@@ -9,3 +9,8 @@ gulp.task("sass", async function () {
     .pipe(minifyCSS())
     .pipe(gulp.dest(utils.DIST_PATH + "/css"));
 });
+gulp.task("copy", function () {
+  return gulp
+    .src("../components/css/font/*")
+    .pipe(gulp.dest(utils.DIST_PATH + "/css/font"));
+});

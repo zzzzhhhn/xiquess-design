@@ -16,60 +16,72 @@
       Sorry, your browser doesn't support embedded videos.
     </video>
     <!--      工具条-->
-    <div class="toolbar poa w100 b0 l0" v-if="!playing || moving">
-      <div class="flex row1">
-        <div class="flex-auto flex">
+    <div
+      class="xq-toolbar xq-poa xq-w100 xq-b0 xq-l0"
+      v-if="!playing || moving"
+    >
+      <div class="xq-flex xq-row1">
+        <div class="xq-flex-auto xq-flex">
           <!--          播放/暂停-->
-          <div class="btn-circle cursor-pointer mr10 f16 flex flex-center">
+          <div
+            class="xq-btn-circle xq-cursor-pointer xq-mr10 xq-f16 xq-flex xq-flex-center"
+          >
             <i
-              class="iconfont"
+              class="iconfont-xq-design"
               style="transform: translateX(2px)"
               v-if="!playing"
               @click="play"
               >&#xe74c;</i
             >
-            <i class="iconfont" v-else @click="pause">&#xe750;</i>
+            <i class="iconfont-xq-design" v-else @click="pause">&#xe750;</i>
           </div>
           <!--          时间-->
-          <div class="span">
-            {{ currentTime | timeFormat }} / {{ maxTime | timeFormat }}
-          </div>
+          <div>{{ currentTime | timeFormat }} / {{ maxTime | timeFormat }}</div>
         </div>
-        <div class="flex-none flex">
+        <div class="xq-flex-none xq-flex">
           <!--          音量-->
-          <div class="btn-circle btn-volume f16 mr10 flex flex-center">
+          <div
+            class="xq-btn-circle xq-btn-volume xq-f16 xq-mr10 xq-flex xq-flex-center"
+          >
             <el-slider
               v-model="currentVolume"
-              class="volume-line"
+              class="xq-volume-line"
               :show-tooltip="false"
               :min="0"
               :max="1"
               :step="0.1"
               @input="setVolume"
-            ></el-slider>
+            />
             <i
-              class="iconfont cursor-pointer f16"
+              class="iconfont-xq-design xq-cursor-pointer xq-f16"
               v-if="!isMuted"
               @click="onToggleMuted(true)"
               >&#xe74f;</i
             >
             <i
-              class="iconfont cursor-pointer f16"
+              class="iconfont-xq-design xq-cursor-pointer xq-f16"
               v-else
               @click="onToggleMuted(false)"
               >&#xe74d;</i
             >
           </div>
           <!--          全屏-->
-          <div class="btn-circle f16 cursor-pointer mr10 flex flex-center">
-            <i class="iconfont" v-if="!isFullScreen" @click="launchFullscreen"
+          <div
+            class="xq-btn-circle xq-f16 xq-cursor-pointer xq-mr10 xq-flex xq-flex-center"
+          >
+            <i
+              class="iconfont-xq-design"
+              v-if="!isFullScreen"
+              @click="launchFullscreen"
               >&#xe7cf;</i
             >
-            <i class="iconfont" v-else @click="exitFullscreen">&#xe792;</i>
+            <i class="iconfont-xq-design" v-else @click="exitFullscreen"
+              >&#xe792;</i
+            >
           </div>
           <!--倍速-->
           <div
-            class="el-dropdown-link btn-circle f16 cursor-pointer flex flex-center multipleList"
+            class="el-dropdown-link xq-por xq-btn-circle xq-f16 xq-cursor-pointer xq-flex xq-flex-center xq-multipleList"
             style="width: 100px; font-size: 14px"
             v-if="canSpeed && canJump"
           >
@@ -77,8 +89,8 @@
               class="el-icon-arrow-down el-icon--right"
             ></i>
 
-            <div class="multipleBox">
-              <ul class="multiple">
+            <div class="xq-multipleBox">
+              <ul class="xq-multiple">
                 <li @click="onChangeSpeed(0.25)">0.25</li>
                 <li @click="onChangeSpeed(0.5)">0.5</li>
                 <li @click="onChangeSpeed(0.75)">0.75</li>
@@ -92,7 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="row2 xq-por">
+      <div class="xq-row2 xq-por">
         <!--      进度条-->
         <el-slider
           v-model="currentTime"
@@ -104,14 +116,14 @@
         <!--    节点-->
         <template v-if="!playing || moving">
           <div
-            class="tip-item poa"
+            class="xq-tip-item xq-poa"
             :style="{ left: item.left }"
             v-for="(item, key) in pointList"
             :key="key"
           >
             <el-tooltip effect="dark" :content="item.text" placement="top">
               <div
-                class="point"
+                class="xq-point"
                 @click="onChangeCurrentTime(item.startTime)"
               ></div>
             </el-tooltip>
@@ -123,8 +135,13 @@
 </template>
 
 <script>
+import { Tooltip, Slider } from "element-ui";
 export default {
   name: "VideoPlayer",
+  components: {
+    [Tooltip.name]: Tooltip,
+    [Slider.name]: Slider,
+  },
   props: {
     url: {
       type: String,
@@ -208,7 +225,7 @@ export default {
         this.moving = false;
       }, 2500);
 
-      let video = document.getElementById("video");
+      let video = this.$refs.video;
       this.interval = setInterval(() => {
         this.videoNowTime = video.currentTime;
         this.$emit("getVideoNowTime", this.videoNowTime);
@@ -337,15 +354,6 @@ export default {
         element.oRequestFullscreen();
       } else if (element.webkitRequestFullscreen) {
         element.webkitRequestFullScreen();
-      } else {
-        var docHtml = document.documentElement;
-        var docBody = document.body;
-        var videobox = document.getElementById("videobox");
-        var cssText = "width:100%;height:100%;overflow:hidden;";
-        docHtml.style.cssText = cssText;
-        docBody.style.cssText = cssText;
-        videobox.style.cssText = cssText + ";" + "margin:0px;padding:0px;";
-        document.IsFullScreen = true;
       }
     },
     /**
@@ -364,14 +372,6 @@ export default {
         document.oCancelFullScreen();
       } else if (document.webkitExitFullscreen) {
         document.webkitExitFullscreen();
-      } else {
-        var docHtml = document.documentElement;
-        var docBody = document.body;
-        var videobox = document.getElementById("videobox");
-        docHtml.style.cssText = "";
-        docBody.style.cssText = "";
-        videobox.style.cssText = "";
-        document.IsFullScreen = false;
       }
     },
     /**

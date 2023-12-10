@@ -1,3 +1,40 @@
+@import "font.css";
 .xq-por {
   position: relative;
+}
+.xq-poa {
+  position: absolute;
+}
+.xq-w100 {
+  width: 100%;
+}
+.xq-b0 {
+  bottom: 0;
+}
+.xq-l0 {
+  left: 0;
+}
+.xq-flex {
+  display: flex;
+  align-items: center;
+}
+.xq-flex-auto {
+  flex: auto;
+}
+.xq-flex-none {
+  flex: none;
+}
+
+.xq-cursor-pointer {
+  cursor: pointer;
+}
+.xq-mr10 {
+  margin-right: 10px;
+}
+.xq-f16 {
+  font-size: 16px;
+}
+
+.xq-flex-center {
+  justify-content: center;
 }

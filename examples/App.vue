@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <indexView />
+    <VideoPlayer url="https://muiplayer.js.org/media/media.mp4" />
   </div>
 </template>
 
