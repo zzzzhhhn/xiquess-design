@@ -1,6 +1,6 @@
 {
   "name": "xiquess-design",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "基于VUE2的组件库,由智邦·喜鹊前端团队开发并维护",
   "private": false,
   "scripts": {
