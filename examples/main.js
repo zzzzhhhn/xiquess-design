@@ -1,8 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
-import VideoPlayer from "../components/lib/VideoPlayer/index.js";
+import xiquessDesign from "../components/lib";
 import "../components/css/index.scss";
-Vue.use(VideoPlayer);
+Vue.use(xiquessDesign);
 Vue.config.productionTip = false;
 
 new Vue({

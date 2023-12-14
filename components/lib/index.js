@@ -1,6 +1,7 @@
 import Vue from "vue";
 import { Tooltip, Slider } from "element-ui";
 import VideoPlayer from "./VideoPlayer";
+import MiniEditor from "./MiniEditor";
 
 const _components = [Tooltip, Slider];
 
@@ -14,7 +15,7 @@ const Element = {
 };
 Vue.use(Element);
 
-const components = [VideoPlayer];
+const components = [VideoPlayer, MiniEditor];
 components.forEach((item) => {
   if (!item.install) {
     item.install = function (Vue) {

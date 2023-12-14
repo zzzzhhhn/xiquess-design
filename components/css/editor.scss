@@ -1,0 +1,22 @@
+.xq-mini-editor {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  .xq-editor-content {
+    text-align: left;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    &[placeholder]:empty:before {
+      content: attr(placeholder);
+      color: gray;
+    }
+  }
+}

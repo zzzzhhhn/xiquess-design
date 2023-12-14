@@ -24,8 +24,12 @@ module.exports = {
           path:'/componentDocs/start'
         },
         {
-          title: 'VideoPlayer',
+          title: '视频播放器',
           path:'/componentDocs/videoPlayer'
+        },
+        {
+          title: '富文本输入框',
+          path:'/componentDocs/Editor'
         }
       ]
     }

@@ -137,7 +137,7 @@
 <script>
 import { Tooltip, Slider } from "element-ui";
 export default {
-  name: "VideoPlayer",
+  name: "XqVideoPlayer",
   components: {
     [Tooltip.name]: Tooltip,
     [Slider.name]: Slider,

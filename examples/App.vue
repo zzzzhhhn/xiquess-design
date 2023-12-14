@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <VideoPlayer url="https://muiplayer.js.org/media/media.mp4" />
+    <XqVideoPlayer url="https://muiplayer.js.org/media/media.mp4" />
+    <XqEditor v-model="text" />
+    内容： {{ text }}
   </div>
 </template>
 
@@ -8,6 +10,9 @@
 export default {
   name: "App",
   components: {},
+  data: () => ({
+    text: "",
+  }),
 };
 </script>
 
