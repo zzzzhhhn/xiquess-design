@@ -6,7 +6,7 @@
 
 ```html
 <template>
-    <VideoPlayer
+    <XqVideoPlayer
             ref="video"
             :width="'100%'"
             :height="'100%'"

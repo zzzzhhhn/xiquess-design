@@ -1,4 +1,4 @@
-# MiniEditor 富文本输入框
+# Editor 富文本输入框
 
 简易的富文本输入框，支持粘贴图片，适用于即时通讯、工单回复等场景。
 
@@ -6,7 +6,7 @@
 
 ```html
 <template>
-    <MiniEditor
+    <XqEditor
             ref="editor"
             v-model="msgText"
             :placeholder="placeholder"

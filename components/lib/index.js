@@ -1,7 +1,9 @@
 import Vue from "vue";
 import { Tooltip, Slider } from "element-ui";
-import VideoPlayer from "./VideoPlayer";
-import MiniEditor from "./MiniEditor";
+import VideoPlayer from "./video-player";
+import MiniEditor from "./mini-editor";
+import Emotion from "./emoji";
+import emojiMap from "./emoji/src/emojiMap";
 
 const _components = [Tooltip, Slider];
 
@@ -15,7 +17,7 @@ const Element = {
 };
 Vue.use(Element);
 
-const components = [VideoPlayer, MiniEditor];
+const components = [VideoPlayer, MiniEditor, Emotion];
 components.forEach((item) => {
   if (!item.install) {
     item.install = function (Vue) {
@@ -24,6 +26,18 @@ components.forEach((item) => {
   }
 });
 const install = function (Vue) {
+  Vue.prototype.$xqGetEmotionHtml = (str) => {
+    return (
+      str &&
+      str.replace(
+        /\[[^\]]+\]/gu,
+        ($1) =>
+          (emojiMap[$1] &&
+            `<span class="xq-wechat-emoji xq-wechat-emoji${emojiMap[$1]}"></span>`) ||
+          $1
+      )
+    );
+  };
   components.forEach((component) => {
     Vue.component(component.name, component);
   });

@@ -3,16 +3,25 @@
     <XqVideoPlayer url="https://muiplayer.js.org/media/media.mp4" />
     <XqEditor v-model="text" />
     内容： {{ text }}
+    <XqEmoji @emotion="onGetEmoji"><button>表情</button></XqEmoji>
+    表情
+    <div v-html="emojiHtml"></div>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-  components: {},
   data: () => ({
     text: "",
+    emojiHtml: "",
   }),
+  methods: {
+    onGetEmoji(v1, v2) {
+      console.log({ v1, v2 });
+      this.emojiHtml += this.$xqGetEmotionHtml(v1);
+    },
+  },
 };
 </script>
 

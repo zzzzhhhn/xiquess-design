@@ -1,0 +1,43 @@
+.xq-wechat-emoji {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url(font/qqface.png);
+  background-repeat: no-repeat;
+  background-size: 300px auto;
+  zoom: 1;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.xq-emoji-panel {
+  background: #fff;
+  padding: 12px 8px;
+  height: 180px;
+  width: 336px;
+  -webkit-box-shadow: 1px 1px 5px #ddd;
+  box-shadow: 1px 1px 5px #ddd;
+}
+.xq-emoji-panel a {
+  box-sizing: border-box;
+  padding: 3px;
+  height: 36px;
+  width: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.xq-emoji-panel a:focus,
+.xq-emoji-panel a:hover {
+  background-color: #eaeaea;
+}
+
+
+@for $i from 0 through 108 {
+  .xq-wechat-emoji#{$i} {
+    background-position: -39px * ($i % 8) floor($i / 8) * -39px;
+  }
+}
+.el-popover.popper-xq-emoji {
+  padding: 0;
+}
+

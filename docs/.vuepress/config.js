@@ -30,6 +30,10 @@ module.exports = {
         {
           title: '富文本输入框',
           path:'/componentDocs/Editor'
+        },
+        {
+          title: '微信表情包',
+          path:'/componentDocs/Emoji'
         }
       ]
     }

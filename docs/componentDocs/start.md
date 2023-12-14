@@ -11,7 +11,9 @@
 ```shell
 npm i xiquess-design -S
 ```
-## 引入 xiquessDesign
+## 快速上手
+
+### 引入 xiquessDesign
 
 在 main.js 中写入以下内容：
 
