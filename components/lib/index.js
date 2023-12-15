@@ -4,6 +4,8 @@ import VideoPlayer from "./video-player";
 import MiniEditor from "./mini-editor";
 import Emotion from "./emoji";
 import emojiMap from "./emoji/src/emojiMap";
+import Captcha from "./captcha";
+import ImgPreviewer from "./img-previewer";
 
 const _components = [Tooltip, Slider];
 
@@ -17,7 +19,7 @@ const Element = {
 };
 Vue.use(Element);
 
-const components = [VideoPlayer, MiniEditor, Emotion];
+const components = [VideoPlayer, MiniEditor, Emotion, Captcha, ImgPreviewer];
 components.forEach((item) => {
   if (!item.install) {
     item.install = function (Vue) {

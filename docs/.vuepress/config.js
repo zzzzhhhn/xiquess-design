@@ -34,6 +34,14 @@ module.exports = {
         {
           title: '微信表情包',
           path:'/componentDocs/Emoji'
+        },
+        {
+          title: '验证码',
+          path:'/componentDocs/Captcha'
+        },
+        {
+          title: '图片预览',
+          path:'/componentDocs/ImgPreviewer'
         }
       ]
     }
