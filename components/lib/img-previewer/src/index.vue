@@ -184,8 +184,7 @@
 /* eslint-disable */
 import { on, off } from "element-ui/src/utils/dom";
 import { rafThrottle, isFirefox } from "element-ui/src/utils/util";
-import $ from "jquery";
-window.$ = $;
+
 const Mode = {
   CONTAIN: {
     name: "contain",

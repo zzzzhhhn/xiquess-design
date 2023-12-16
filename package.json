@@ -21,7 +21,8 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^5.1.0",
     "jquery": "^3.7.1",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -59,7 +60,10 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {},
+    "globals": {
+      "$": true
+    }
   },
   "browserslist": [
     "> 1%",

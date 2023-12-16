@@ -35,6 +35,12 @@ module.exports = {
           },
         ],
       },
+      {
+        text: /\.worker\.js$/,
+        use: {
+          loader: "worker-loader",
+        },
+      },
     ],
   },
 };

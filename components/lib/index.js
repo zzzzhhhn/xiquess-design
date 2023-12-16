@@ -6,7 +6,11 @@ import Emotion from "./emoji";
 import emojiMap from "./emoji/src/emojiMap";
 import Captcha from "./captcha";
 import ImgPreviewer from "./img-previewer";
-
+import DraggableTabs from "./draggable-tabs";
+import Tag from "./tag";
+import Select from "./select";
+import $ from "jquery";
+window.$ = $;
 const _components = [Tooltip, Slider];
 
 const Element = {
@@ -19,7 +23,16 @@ const Element = {
 };
 Vue.use(Element);
 
-const components = [VideoPlayer, MiniEditor, Emotion, Captcha, ImgPreviewer];
+const components = [
+  VideoPlayer,
+  MiniEditor,
+  Emotion,
+  Captcha,
+  ImgPreviewer,
+  DraggableTabs,
+  Tag,
+  Select,
+];
 components.forEach((item) => {
   if (!item.install) {
     item.install = function (Vue) {

@@ -42,7 +42,19 @@ module.exports = {
         {
           title: '图片预览',
           path:'/componentDocs/ImgPreviewer'
-        }
+        },
+        {
+          title: '可拖拽标签页',
+          path:'/componentDocs/Tabs'
+        },
+        {
+          title: '标签',
+          path:'/componentDocs/Tag'
+        },
+        {
+          title: '多选选择器',
+          path:'/componentDocs/Select'
+        },
       ]
     }
   }

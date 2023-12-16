@@ -1,0 +1,19 @@
+.xq-draggable-tabs {
+  height: 40px;
+  .xq-mover {
+    display: none;
+  }
+  .xq-tab-item {
+    &.active {
+      border-bottom: 2px solid #0583F8;
+      .xq-page-title {
+        font-weight: bold;
+      }
+    }
+    &:hover {
+      .xq-mover {
+        display: inline-block;
+      }
+    }
+  }
+}
