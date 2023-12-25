@@ -36,7 +36,7 @@ module.exports = {
         ],
       },
       {
-        text: /\.worker\.js$/,
+        test: /\.worker\.js$/,
         use: {
           loader: "worker-loader",
         },
