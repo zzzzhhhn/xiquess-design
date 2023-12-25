@@ -344,7 +344,7 @@ export default {
     },
     mouseEvent(event, delta, deltaX, deltaY) {
       if (delta === undefined) {
-        delta = event.originalEvent?.wheelDelta;
+        delta = event.originalEvent && event.originalEvent.wheelDelta;
       }
       if (delta > 0) {
         this.handleActions("zoomIn", {

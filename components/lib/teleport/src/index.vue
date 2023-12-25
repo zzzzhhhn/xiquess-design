@@ -17,16 +17,16 @@ export default {
   },
 
   mounted() {
-    document.querySelector(this.to)?.appendChild(this.$el);
+    document.querySelector(this.to).appendChild(this.$el);
   },
 
   destroyed() {
-    document.querySelector(this.to)?document.querySelector(this.to).removeChild(this.$el);
+    document.querySelector(this.to) &&
+      document.querySelector(this.to).removeChild(this.$el);
   },
 
   render() {
-    return <div>{this.$scopedSlots.default()}</div>;
+    return `<div>${this.$scopedSlots.default()}</div>`;
   },
 };
 </script>
-

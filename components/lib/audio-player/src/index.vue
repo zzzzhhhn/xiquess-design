@@ -230,7 +230,8 @@ export default {
     initAudio() {
       this.$refs.originAudio.oncanplay = () => {
         this.isReady = true;
-        this.audioDuration = this.$refs.originAudio?.duration;
+        this.audioDuration =
+          this.$refs.originAudio && this.$refs.originAudio.duration;
         this.audioDurationDate = this.formate(Math.floor(this.audioDuration));
       };
     },
@@ -302,19 +303,11 @@ export default {
           url: this.url,
           name: name,
         });
-        if (window.isElectron) {
-          const fileName =
-            res.data?.split("/").at(-1)?.split("?")[0] || name + ".wav";
-          window.ipc.send("download", {
-            downloadPath: res.data, // 下载链接（以下载vue文件为例）
-            fileName: fileName, // 下载文件名，需要包含后缀名
-          });
-        } else {
-          let a = document.createElement("a");
-          a.href = res.data;
-          a.click();
-          console.log(res);
-        }
+
+        let a = document.createElement("a");
+        a.href = res.data;
+        a.click();
+        console.log(res);
       }
     },
     initDragSlider() {
