@@ -55,6 +55,14 @@ module.exports = {
           title: '多选选择器',
           path:'/componentDocs/Select'
         },
+        {
+          title: '音频播放器',
+          path:'/componentDocs/AudioPlayer'
+        },
+        {
+          title: '节点传送',
+          path:'/componentDocs/Teleport'
+        },
       ]
     }
   }

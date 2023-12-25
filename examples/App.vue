@@ -18,7 +18,14 @@
     <!--    <XqPdfPreviewer :src="pdf" v-model="show"></XqPdfPreviewer>-->
     <!--    <XqTag name="1231232dadasdasdsadasdasdasdasd" @close="onClose" />-->
     <!--    <XqTag name="1231232dadasdasdsadasdasdasdasd" @close="onClose" />-->
-    <XqMultipleSelect :list="list" v-model="value" />
+    <!-- <XqMultipleSelect :list="list" v-model="value" /> -->
+    <XqAudioPlayer
+      url="https://zxb-callcenter.oss-cn-hangzhou.aliyuncs.com/zxb-callcenter-202109/1442012437607694337.wav"
+    ></XqAudioPlayer>
+    <div class="add"></div>
+    <XqTeleport to=".add">
+      <div>123</div>
+    </XqTeleport>
   </div>
 </template>
 

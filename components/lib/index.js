@@ -9,6 +9,8 @@ import ImgPreviewer from "./img-previewer";
 import DraggableTabs from "./draggable-tabs";
 import Tag from "./tag";
 import Select from "./select";
+import AudioPlayer from "./audio-player";
+import Teleport from "./teleport";
 import $ from "jquery";
 window.$ = $;
 const _components = [Tooltip, Slider];
@@ -32,6 +34,8 @@ const components = [
   DraggableTabs,
   Tag,
   Select,
+  AudioPlayer,
+  Teleport,
 ];
 components.forEach((item) => {
   if (!item.install) {
